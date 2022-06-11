@@ -110,7 +110,7 @@
 <li>第二是一个输入框和一个完成按钮</li>
 <li>第三是一段问候文本</li>
 </ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/12661360-3011efed591bb408.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HelloWord"></p>
+<p><img src="https://s1.ax1x.com/2022/06/12/Xg6qMR.png" alt="HelloWord"></p>
 <p>接下来让我们马上开始吧！</p>
 <h3 id="1-一段欢迎文本"><a href="#1-一段欢迎文本" class="headerlink" title="1.一段欢迎文本"></a>1.一段欢迎文本</h3><p>接下来我们编写我们的第一个Compose函数，一段欢迎文本。<br>MainActivity.kt</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Composable</span><br><span class="line">fun Welcome() &#123;</span><br><span class="line">    Text(text = stringResource(id = R.string.welcome),</span><br><span class="line">    style = MaterialTheme.typography.subtitle1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -145,37 +145,36 @@
 <h3 id="2-Preview注解参数配置"><a href="#2-Preview注解参数配置" class="headerlink" title="2.@Preview注解参数配置"></a>2.@Preview注解参数配置</h3><p>我们可以为预览设置背景颜色，当然，首先要确认设置显示背景为true。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Preview(showBackground = true, backgroundColor = 0xffff0000)</span><br><span class="line">@Composable</span><br><span class="line">fun DefaultPreview() &#123;</span><br><span class="line">    Hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/12661360-3fcf15af7a011614.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HelloWord红色背景"></p>
+<p><img src="https://s1.ax1x.com/2022/06/12/Xg6Ls1.png" alt="HelloWord红色背景"></p>
 <p>同理，预览的尺寸一般是自适应的，但是我们也可以为预览设置固定的宽高。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Preview(widthDp = 100, heightDp = 100)</span><br><span class="line">@Composable</span><br><span class="line">fun DefaultPreview() &#123;</span><br><span class="line">    Hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>测试多国语言的时候，如果我们在string-zh-rCN里设置了翻译语言，就可以通过locale参数，设置预览显示的语言。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Preview(locale = &quot;zh-rCN&quot;)</span><br><span class="line">@Composable</span><br><span class="line">fun DefaultPreview() &#123;</span><br><span class="line">    Hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果想显示状态栏和动作栏，我们可以设置showSystemUi：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Preview(showSystemUi = true)</span><br><span class="line">@Composable</span><br><span class="line">fun DefaultPreview() &#123;</span><br><span class="line">    Hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-分组预览"><a href="#3-分组预览" class="headerlink" title="3.分组预览"></a>3.分组预览</h3><p>当代码中我们设置了多个预览函数时，我们可以选择这些预览函数在右侧预览面板以网格或者垂直的方式展示。<br><img src="https://upload-images.jianshu.io/upload_images/12661360-c85db92c6878b4a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="分组预览"><br>当我们代码中设置了非常多的预览函数，导致预览面板看起来十分混乱，这时我们可以设置在右侧预览面板上面进行分组预览。<br>新建一个预览分组：</p>
+<h3 id="3-分组预览"><a href="#3-分组预览" class="headerlink" title="3.分组预览"></a>3.分组预览</h3><p>当代码中我们设置了多个预览函数时，我们可以选择这些预览函数在右侧预览面板以网格或者垂直的方式展示。<br><img src="https://s1.ax1x.com/2022/06/12/Xg65IU.png" alt="分组预览"><br>当我们代码中设置了非常多的预览函数，导致预览面板看起来十分混乱，这时我们可以设置在右侧预览面板上面进行分组预览。<br>新建一个预览分组：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Preview(group = &quot;group1&quot;)</span><br><span class="line">@Composable</span><br><span class="line">fun Welcome() &#123;</span><br><span class="line">    Text(text = stringResource(id = R.string.welcome),</span><br><span class="line">    style = MaterialTheme.typography.subtitle1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>切换分组视图：<br><img src="https://upload-images.jianshu.io/upload_images/12661360-c96dd6d7fa92056a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="切换分组视图"></p>
+<p>切换分组视图：<br><img src="https://s1.ax1x.com/2022/06/12/Xg6TG4.png" alt="切换分组视图"></p>
 <h2 id="（三）运行Compose应用"><a href="#（三）运行Compose应用" class="headerlink" title="（三）运行Compose应用"></a>（三）运行Compose应用</h2><p>如果我们想看看界面UI及一些交互操作在模拟器及真机上的效果，我们可以通过以下两个方式：</p>
 <ul>
 <li>部署Composable函数</li>
-<li>运行App<h3 id="1-部署Composable函数"><a href="#1-部署Composable函数" class="headerlink" title="1.部署Composable函数"></a>1.部署Composable函数</h3>我们在预览面板的某个预览函数的预览界面的右上角，有一个预览按钮，点击即可<strong>部署</strong>到真机或模拟器上，这种方法比较适合调试单个Composable函数的时候。<br><img src="https://upload-images.jianshu.io/upload_images/12661360-b1d18eacf91efebe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="部署函数"><br>这种方法会为我们自动创建运行配置，我们可以在Run&#x2F;Debug Comfigurations里面进行修改。</li>
+<li>运行App<h3 id="1-部署Composable函数"><a href="#1-部署Composable函数" class="headerlink" title="1.部署Composable函数"></a>1.部署Composable函数</h3>我们在预览面板的某个预览函数的预览界面的右上角，有一个预览按钮，点击即可<strong>部署</strong>到真机或模拟器上，这种方法比较适合调试单个Composable函数的时候。<br><img src="https://s1.ax1x.com/2022/06/12/Xg67RJ.png" alt="部署函数"><br>这种方法会为我们自动创建运行配置，我们可以在Run&#x2F;Debug Comfigurations里面进行修改。</li>
 </ul>
 <h3 id="2-在Activity上使用Composable函数"><a href="#2-在Activity上使用Composable函数" class="headerlink" title="2.在Activity上使用Composable函数"></a>2.在Activity上使用Composable函数</h3><p>普通情况下，我们新建的工程，在AndroidManifest.xml项目里面就将MainActivity设置为启动界面。并在MainActivity里设置它对应的布局。同样的，使用Compose时，我们也需要在Activity里面绑定Compose表示的界面。</p>
 <p>MainActivity.kt</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MainActivity : ComponentActivity() &#123;</span><br><span class="line">    override fun onCreate(savedInstanceState: Bundle?) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState)</span><br><span class="line">        setContent &#123;</span><br><span class="line">            Welcome()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我们通过setContent{ }就可以简洁明了地设置对应的布局。与之前的setContentView()相比，使用Jetpack Compose，不需要维护对UI组件树或其单个元素的引用。这点我们会在后面详细介绍。</p>
-<h3 id="3-项目的配置"><a href="#3-项目的配置" class="headerlink" title="3.项目的配置"></a>3.项目的配置</h3><p>Jetpack Compose依赖Kotlin编写，这意味着我们的应用程序项目必须配置为Kotlin工程，但这并不意味着我们完全不能使用Java。事实上，只要我们的可组合函数是用Kotlin编写的，就可以在项目中轻松地混合Kotlin和Java，同时也可以混合使用传统视图和可组合视图。关于这个<strong>互操作性</strong>API主题我们将在后面详细介绍。<br>在创建项目的时候，我们只需要选择Empty Compose Activity，AndroidStudio就会为我们做好一个Compose项目的所有配置。<br><img src="https://upload-images.jianshu.io/upload_images/12661360-ed0142d880cf814d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="新建Compose项目"><br>这包括在项目级别的build.gradle里面对Kotlin的引用和配置，API版本不低于21，及在应用级别的build.gradle里面引入compose相关的依赖库。</p>
+<h3 id="3-项目的配置"><a href="#3-项目的配置" class="headerlink" title="3.项目的配置"></a>3.项目的配置</h3><p>Jetpack Compose依赖Kotlin编写，这意味着我们的应用程序项目必须配置为Kotlin工程，但这并不意味着我们完全不能使用Java。事实上，只要我们的可组合函数是用Kotlin编写的，就可以在项目中轻松地混合Kotlin和Java，同时也可以混合使用传统视图和可组合视图。关于这个<strong>互操作性</strong>API主题我们将在后面详细介绍。<br>在创建项目的时候，我们只需要选择Empty Compose Activity，AndroidStudio就会为我们做好一个Compose项目的所有配置。<br><img src="https://s1.ax1x.com/2022/06/12/Xg6Hz9.png" alt="新建Compose项目"><br>这包括在项目级别的build.gradle里面对Kotlin的引用和配置，API版本不低于21，及在应用级别的build.gradle里面引入compose相关的依赖库。</p>
 <h3 id="4-点击运行按钮"><a href="#4-点击运行按钮" class="headerlink" title="4.点击运行按钮"></a>4.点击运行按钮</h3><p><strong>运行</strong>我们的App，首先确定我们运行的app（下图的app处）是否已选择，并确认我们要运行的设备（下图的Pixel XL API 30处）是否已选择，然后点击绿色播放按钮，即可成功运行我们的应用。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/12661360-9bc24e8a7a714fba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行程序"></p>
+<p><img src="https://s1.ax1x.com/2022/06/12/Xg6oiF.png" alt="运行程序"></p>
 <p>至此，我们开发的第一HelloWorld应用就顺利完成了！</p>
-<h2 id="（四）总结回顾"><a href="#（四）总结回顾" class="headerlink" title="（四）总结回顾"></a>（四）总结回顾</h2><p>###1.总结<br>这一章，我们学习了如何编写我们的第一个Compose程序，并成功运行到设备上。同时，在编写代码的过程中，我们了解到了如何使用@Composable注解编写一个可组合函数，及如何使用@Preview注解在预览面板预览可组合函数。另外，对可组合函数的状态与重组及状态提升等概念也有了基本的了解。</p>
-<p>###2.回顾</p>
-<p><strong>关键术语</strong><br>@Composable<br>带参数的字符串<br>三大布局基础布局（Row&#x2F;Column&#x2F;Box）<br>remember<br>mutableStateOf<br>可组合函数的状态与重组<br>状态提升<br>@Preview<br>@PreviewParameter<br>项目的部署与运行</p>
+<h2 id="（四）总结回顾"><a href="#（四）总结回顾" class="headerlink" title="（四）总结回顾"></a>（四）总结回顾</h2><h3 id="1-总结"><a href="#1-总结" class="headerlink" title="1.总结"></a>1.总结</h3><p>这一章，我们学习了如何编写我们的第一个Compose程序，并成功运行到设备上。同时，在编写代码的过程中，我们了解到了如何使用@Composable注解编写一个可组合函数，及如何使用@Preview注解在预览面板预览可组合函数。另外，对可组合函数的状态与重组及状态提升等概念也有了基本的了解。</p>
+<h3 id="2-回顾"><a href="#2-回顾" class="headerlink" title="2.回顾"></a>2.回顾</h3><p><strong>关键术语</strong><br>@Composable<br>带参数的字符串<br>三大布局基础布局（Row&#x2F;Column&#x2F;Box）<br>remember<br>mutableStateOf<br>可组合函数的状态与重组<br>状态提升<br>@Preview<br>@PreviewParameter<br>项目的部署与运行</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/06/%E7%AC%AC1%E7%AB%A0%20%E5%88%9B%E5%BB%BA%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AACompose%E5%BA%94%E7%94%A8/" data-id="cl4ab2nqs00010v5t1jyp8wt2" class="article-share-link">
+      <a data-url="http://example.com/2022/06/06/%E7%AC%AC1%E7%AB%A0%20%E5%88%9B%E5%BB%BA%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AACompose%E5%BA%94%E7%94%A8/" data-id="cl4abe7cg00022t5thqrz71s4" class="article-share-link">
         分享
       </a>
       
